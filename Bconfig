@@ -1,0 +1,16 @@
+menuconfig TSNAKE
+	bool "Tsnake (Terminal Snake)"
+	depends on EXTRA_NCURSES
+
+if TSNAKE
+
+choice
+	prompt "Version"
+	default TSNAKE_VER_0_0_0
+
+config TSNAKE_VER_0_0_0
+	bool "0.0.0"
+
+endchoice
+
+endif
