@@ -6,10 +6,13 @@ if TSNAKE
 
 choice
 	prompt "Version"
-	default TSNAKE_VER_0_0_0
+	default TSNAKE_VER_0_0_1
 
 config TSNAKE_VER_0_0_0
 	bool "0.0.0"
+
+config TSNAKE_VER_0_0_1
+	bool "0.0.1"
 
 endchoice
 

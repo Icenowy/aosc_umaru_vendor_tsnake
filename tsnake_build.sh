@@ -16,6 +16,6 @@ mkdir -p destdir &&
 tar xvf "$downloads_prefix"/tsnake-${tsnake_ver}.tar.gz &&
 
 cd Tsnake-${tsnake_ver} &&
-MAKEFLAGS=$PAR_MAKEFLAGS make CXX=$tools_prefix/bin/$AOSC_EC_TRIPLET-g++ HOSTCXX=g++ CXXFLAGS="$TARGET_CXXFLAGS -DNO_INTL" LIBS="-lncurses -static-libgcc -static-libstdc++" &&
+MAKEFLAGS=$PAR_MAKEFLAGS make CXX=$tools_prefix/bin/$AOSC_EC_TRIPLET-g++ HOSTCXX=g++ CXXFLAGS="$TARGET_CXXFLAGS -DNO_INTL -std=gnu++11" LIBS="-lncurses -static-libgcc -static-libstdc++" &&
 mkdir -p $PKGDIR/bin &&
 cp tsnake $PKGDIR/bin
